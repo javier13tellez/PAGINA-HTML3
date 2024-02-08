@@ -1,0 +1,92 @@
+.cont2 { font: 400 1em/1.5 "Neuton"; background: #090d00; color: rgba(255,255,255,.25); text-align: center; margin: 0 }
+
+p {
+	text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 -20em;
+  
+  span {
+
+  	font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+ 
+
+/* Clip Background Image */
+
+	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+  .container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;  
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  sub, sup {
+    display: inline-block;
+    font-size: 50%;
+    animation: steps 2s infinite alternate;
+  }
+  
+  @keyframes steps {
+    0% { transform: rotate(15deg); }
+    100% { transform: rotate(-15deg); }
+  }
+
+
+html {
+	--sz: 28px;
+	--c1: #eea300;
+	--c2: #6a994e;
+	--c3: #ac9013;
+	--c4: #4a8656;   
+	--ts: 50%/ calc(var(--sz) * 5.5) calc(var(--sz) * 9.5);
+	--b1: conic-gradient(from 180deg at 16% 73.5%, var(--c2) 0 120deg, #fff0 0 100%) var(--ts);
+	--b2: conic-gradient(from 180deg at 39.5% 65.65%, var(--c3) 0 60deg, var(--c1) 0 120deg, #fff0 0 100%) var(--ts);
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	background: 
+		conic-gradient(from 0deg at 92.66% 50%, var(--c2) 0 120deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from -60deg at 81.66% 10.25%, var(--c2) 0 180deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from -60deg at 66.66% 22.25%, var(--c1) 0 120deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from 0deg at 71.66% 43%, var(--c3) 0 120deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from 0deg at 66.66% 45.95%, var(--c3) 0 60deg, #fff0 0 100%) var(--ts),
+		conic-gradient(from 120deg at 25% 91.5%, var(--c1) 0 120deg, #fff0 0 100%) var(--ts),
+		var(--b1), var(--b1), var(--b1), var(--b1),	var(--b2), var(--b2), var(--b2), var(--b2),      
+		conic-gradient(from 60deg at 50% 51.5%, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c4) 0 100%) var(--ts);
+}
